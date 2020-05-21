@@ -18,7 +18,7 @@
                     <i class="far fa-user"></i>
                     </div>
                 </div>
-                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                {!! Form::text('name', null, ['class' => 'form-control', 'required']) !!}
             </div>
 
             <label for="lastname" class="mtop16">Apellido:</label>
@@ -28,7 +28,7 @@
                     <i class="fas fa-user-tag"></i>
                     </div>
                 </div>
-                {!! Form::text('lastname', null, ['class' => 'form-control']) !!}
+                {!! Form::text('lastname', null, ['class' => 'form-control', 'required']) !!}
             </div>
 
             <label for="email" class="mtop16">Correo electronico:</label>
@@ -38,7 +38,7 @@
                         <i class="far fa-envelope-open"></i>
                     </div>
                 </div>
-                {!! Form::email('email', null, ['class' => 'form-control']) !!}
+                {!! Form::email('email', null, ['class' => 'form-control', 'required']) !!}
             </div>
 
             <label for="password" class="mtop16">Password:</label>
@@ -48,7 +48,7 @@
                         <i class="fas fa-lock"></i>
                     </div>
                 </div>
-                {!! Form::password('password', ['class' => 'form-control']) !!}
+                {!! Form::password('password', ['class' => 'form-control', 'required']) !!}
             </div>
 
             <label for="cpassword" class="mtop16">Confirmar Password:</label>
@@ -58,7 +58,7 @@
                         <i class="fas fa-lock"></i>
                     </div>
                 </div>
-                {!! Form::password('cpassword', ['class' => 'form-control']) !!}
+                {!! Form::password('cpassword', ['class' => 'form-control', 'required']) !!}
             </div>
             {!! Form::submit('Ingresar', ['class' => 'btn btn-success mtop16']) !!}
             {!! Form::close() !!}
