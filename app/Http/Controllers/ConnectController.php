@@ -3,21 +3,65 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator, Hash;
+use Validator, Hash, Auth;
 use App\User;
 
 
 
 class ConnectController extends Controller
 {
+
+    #Esta funcion requiere que el usuario no este logueado, en caso de estar logueado no podremos ejecutar los metodos
+    #El metodo getLogout si podemos ejecutarlos porque tiene el except delante. Es logico, ya que si estamos logueados,
+    #   deberiamos poder desloguearnos. Y si no agregamos esta excepcion no podriamos ejecutar getLogout una ves que 
+    #   estemos logueados.
+    #Este middleware se ejecutara cada ves que se ejecute un metodo de ConnectController.php
+    public function __construct(){
+        $this->middleware('guest')->except(['getLogout']);
+    }
+
     public function getLogin(){
         return view('connect.login');
+    }
+
+    public function postLogin(Request $request){
+        $rules = [
+            'email' => 'required|email',
+            'password' => 'required|min:8'
+        ];
+
+        $messages = [
+            'email.required' => 'Su correo electrónico es requerido.',
+            'email.email' => 'El formato de su correo electrónico es inválido.',
+            'password.required' => 'Por favor escriba una contraseña.',
+            'password.min' => 'La contraseña debe tener al menos 8 caracteres.'
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+        if($validator->fails()):
+            return back()->withErrors($validator)->with('message', 'Se ha producido un error')->with('typealert','danger');
+        else:
+            #Aca validamos que los datos del usuario ingresados en el form sean correctos.
+            #Si no son correctos redireccionamos nuevamente al formulario de login.
+            #Se comparan los datos ingresados en el formulario login con los datos de la base de datos.
+            #El para metro true es para que la sesion quede conectada por un determinado tiempo.
+            if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], true)):
+                return redirect('/');
+            else:
+                return back()->with('message', 'Error de autenticación. Usuario o contraseña incorrecta!')->with('typealert','danger');
+
+            endif;
+        endif;
+
+
     }
 
     public function getRegister(){
         return view('connect.register');
     }
 
+
+    #Validador para el formulario.
     public function postRegister(Request $request){
         $rules = [
             'name' => 'required',
@@ -64,5 +108,11 @@ class ConnectController extends Controller
 
     }
 
+    #Este metodo es para cerrar la sesion del usuario
+    public function getLogout(){
+        Auth::logout();
+        return redirect('/');
+
+    }
 
 }
