@@ -31,6 +31,7 @@
                 {!! Form::password('password', ['class' => 'form-control']) !!}
             </div>
             {!! Form::submit('Ingresar', ['class' => 'btn btn-success mtop16']) !!}
+            
             {!! Form::close() !!}
 
             @if(Session::has('message'))

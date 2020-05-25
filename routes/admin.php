@@ -1,9 +1,8 @@
 <?php
 
-    Route::get('/admin', function(){
-        return 'holaa';
-    })
-
+    Route::prefix('/admin')->group(function(){
+        Route::get('/', 'Admin\DashboardController@getDashboard');
+    });
 
 
 ?>
