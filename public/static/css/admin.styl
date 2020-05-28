@@ -6,7 +6,8 @@ body
 h2,h3,h4,h5,ul,body,html
     padding 0px
     margin 0px
-
+.mtop16
+    margin-top 16px
 .wrapper
     min-height 100vh
     overflow hidden
@@ -20,7 +21,7 @@ h2,h3,h4,h5,ul,body,html
         width 83%
 
 .sidebar
-    background-color #fff 
+    background-color #000000 
     min-height 100vh
     .section-top
         box-shadow 0 0.5rem 1rem rgba(0,0,0,0.15)
@@ -31,6 +32,7 @@ h2,h3,h4,h5,ul,body,html
         width 38%
     .user
         padding 16px
+        color #fff 
         a
             font-size 1.2em
     .main 
@@ -39,16 +41,60 @@ h2,h3,h4,h5,ul,body,html
             li
                 margin-bottom 4px
                 a 
-                    color #8998AC !important
+                    color #fff !important
                     display block
                     font-size 1.1em
                     padding 12px 16px
                     i
                         margin-right 10px
                     &:hover
-                        background-color #000000
+                        background-color #fff
                         box-shadow 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
-                        color #fff !important
+                        color #000000 !important
                         text-decoration none
-                        
-                   
+            
+.navbar
+    background-color #000000 !important
+    a
+        font-size 1.1em
+        color #fff !important
+        text-decoration none
+        &:hover
+            background-color #fff                
+            color #000000 !important
+        i
+            margin-right 4px
+
+.page
+    padding-top 16px
+    padding-bottom 16px
+    .breadcrumb
+        background-color #fff
+        box-shadow 0 0.5rem 1rem rgba(0, 0, 0, 0.10) !important
+        .breadcrumb-item
+            a 
+                &:hover 
+                    text-decoration none 
+                i
+                    margin-right 4px
+
+    .panel
+        background-color #fff
+        border-radius 6px
+        border-bottom 2px solid #000000
+        width 100%
+        .header 
+            border-bottom 1px solid #e8e8e8
+            h2.title
+                display inline-block
+                color #19213d
+                font-size 1.1em
+                padding 12px 16px
+        .inside
+            padding 16px
+.opts
+    a 
+        border-radius 4px
+        border 1px solid #dedede
+        display inline-block
+        padding 8px 12px

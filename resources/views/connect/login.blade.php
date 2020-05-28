@@ -9,6 +9,7 @@
             <img src="{{ url('/static/img/logoMars.jpg') }}">
         </a>
     </div>
+        <!-- Formulario de Login -->
         <div class="inside">
             {!! Form::open(['url' => '/login']) !!}
             <label for="email">Correo electronico:</label>
@@ -30,9 +31,10 @@
                 </div>
                 {!! Form::password('password', ['class' => 'form-control']) !!}
             </div>
-            {!! Form::submit('Ingresar', ['class' => 'btn btn-success mtop16']) !!}
+            {!! Form::submit('Ingresar', ['class' => 'btn btn-dark mtop16']) !!}
             
             {!! Form::close() !!}
+
 
             @if(Session::has('message'))
                 <div class="container">

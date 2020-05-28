@@ -1,9 +1,11 @@
 <div class="sidebar shadow">
     <div class="section-top">
+        <!-- Logo del Sidebar -->
         <div class="logo">
             <img src="{{ url('/static/img/logoMars.jpg') }}" class="img-fluid">
         </div>
         
+        <!-- Datos del usuario logueado en el Sidebar y boton de Logout -->
         <div class="user">
             <span class="subtitle">
                 Hola:
@@ -20,6 +22,7 @@
         </div>
     </div>
 
+    <!-- Enlaces del Sidebar -->
     <div class="main">
         <ul>
             <li>

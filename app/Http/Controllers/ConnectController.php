@@ -11,11 +11,11 @@ use App\User;
 class ConnectController extends Controller
 {
 
-    #Esta funcion requiere que el usuario no este logueado, en caso de estar logueado no podremos ejecutar los metodos
-    #El metodo getLogout si podemos ejecutarlos porque tiene el except delante. Es logico, ya que si estamos logueados,
+    # Esta funcion requiere que el usuario no este logueado, en caso de estar logueado no podremos ejecutar los metodos.
+    # El metodo getLogout si podemos ejecutarlo porque tiene el except delante. Es logico, ya que si estamos logueados,
     #   deberiamos poder desloguearnos. Y si no agregamos esta excepcion no podriamos ejecutar getLogout una ves que 
     #   estemos logueados.
-    #Este middleware se ejecutara cada ves que se ejecute un metodo de ConnectController.php
+    # Este middleware se ejecutara cada ves que se ejecute un metodo de ConnectController.php
     public function __construct(){
         $this->middleware('guest')->except(['getLogout']);
     }
@@ -24,6 +24,8 @@ class ConnectController extends Controller
         return view('connect.login');
     }
 
+    # Una ves ingresados los datos en el formulario de login, llegan el email y la password a postLogin a travez de
+    #   $request
     public function postLogin(Request $request){
         $rules = [
             'email' => 'required|email',
@@ -41,7 +43,7 @@ class ConnectController extends Controller
         if($validator->fails()):
             return back()->withErrors($validator)->with('message', 'Se ha producido un error')->with('typealert','danger');
         else:
-            #Aca validamos que los datos del usuario ingresados en el form sean correctos.
+            # Aca validamos que los datos del usuario ingresados en el form sean correctos.
             #Si no son correctos redireccionamos nuevamente al formulario de login.
             #Se comparan los datos ingresados en el formulario login con los datos de la base de datos.
             #El para metro true es para que la sesion quede conectada por un determinado tiempo.
@@ -85,9 +87,9 @@ class ConnectController extends Controller
             'cpassword.same' => 'Las contraseñas no coinciden.'
         ];
 
-        #Validator obtiene valor True o False segun el resultado de la validacion de los campos
-        #Si da False quiere decir que falló, y vuelve atras
-        #Si da True, guarda la info en la base de datos
+        # Validator obtiene valor True o False segun el resultado de la validacion de los campos.
+        # Si da False quiere decir que falló, y vuelve atras,
+        # Si da True, guarda la info en la base de datos.
         $validator = Validator::make($request->all(), $rules, $messages);
         if($validator->fails()):
             return back()->withErrors($validator)->with('message', 'Se ha producido un error')->with('typealert','danger');
