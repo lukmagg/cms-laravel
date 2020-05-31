@@ -32,6 +32,9 @@
                 <a href="{{ url('/admin/products') }}"><i class="fas fa-boxes"></i>Productos</a>
             </li>
             <li>
+                <a href="{{ url('/admin/categories/0') }}"><i class="fas fa-folder-open"></i>Categorias</a>
+            </li>
+            <li>
                 <a href="{{ url('/admin/users') }}"><i class="fas fa-user-friends"></i>Usuarios</a>
             </li>
         </ul>

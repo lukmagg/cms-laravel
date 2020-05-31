@@ -25,7 +25,7 @@ class ConnectController extends Controller
     }
 
     # Una ves ingresados los datos en el formulario de login, llegan el email y la password a postLogin a travez de
-    #   $request
+    #   la variable $request
     public function postLogin(Request $request){
         $rules = [
             'email' => 'required|email',
@@ -44,9 +44,9 @@ class ConnectController extends Controller
             return back()->withErrors($validator)->with('message', 'Se ha producido un error')->with('typealert','danger');
         else:
             # Aca validamos que los datos del usuario ingresados en el form sean correctos.
-            #Si no son correctos redireccionamos nuevamente al formulario de login.
-            #Se comparan los datos ingresados en el formulario login con los datos de la base de datos.
-            #El para metro true es para que la sesion quede conectada por un determinado tiempo.
+            # Si no son correctos redireccionamos nuevamente al formulario de login.
+            # Se comparan los datos ingresados en el formulario login con los datos de la base de datos.
+            # El para metro true es para que la sesion quede conectada por un determinado tiempo.
             if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], true)):
                 return redirect('/');
             else:
@@ -95,8 +95,8 @@ class ConnectController extends Controller
             return back()->withErrors($validator)->with('message', 'Se ha producido un error')->with('typealert','danger');
         else:
             $user = new User;
-            #La e() es para encodear los datos, y que no entren scripts dañinos por nuestro form.
-            #Hash es para encriptar la contraseña.
+            # La e() es para encodear los datos, y que no entren scripts dañinos por nuestro form.
+            # Hash es para encriptar la contraseña.
             $user -> name = e($request -> input('name'));
             $user -> lastname = e($request -> input('lastname'));
             $user -> email = e($request -> input('email'));
@@ -110,7 +110,7 @@ class ConnectController extends Controller
 
     }
 
-    #Este metodo es para cerrar la sesion del usuario
+    # Este metodo es para cerrar la sesion del usuario
     public function getLogout(){
         Auth::logout();
         return redirect('/');

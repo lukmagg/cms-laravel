@@ -13,6 +13,9 @@ class IsAdmin
      * @param  \Closure  $next
      * @return mixed
      */
+
+    // El metodo handle es comun a todos los middleware
+    //  aqui dentro es donde se ejecutan las acciones.
     public function handle($request, Closure $next)
     {
         if(Auth::user()->role == "1"):

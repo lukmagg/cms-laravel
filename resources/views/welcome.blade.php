@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url('/static/css/connect.css?v='.time())}}">
 
         <!-- Styles -->
         <style>
@@ -49,13 +50,13 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #000000;
                 padding: 0 25px;
                 font-size: 13px;
-                font-weight: 600;
+                font-weight: 900;
                 letter-spacing: .1rem;
                 text-decoration: none;
-                text-transform: uppercase;
+                
             }
 
             .m-b-md {
@@ -81,9 +82,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <a href="{{ url('/') }}">
+                        <img src="{{ url('/static/img/logoMars.jpg') }}" class="aa">
+                    </a>
                 </div>
 
+                <!--  
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -94,6 +98,8 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                -->
+
             </div>
         </div>
     </body>
