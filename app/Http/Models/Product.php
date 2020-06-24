@@ -5,7 +5,7 @@ namespace App\Http\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class Product extends Model
 {
     // SoftDeletes sirve para que los registros eliminados de la base de datos no se borren completamente.
     //  Sino, que se les asigna un atributo deleted_at para que no haya problemas despues, entonces, en la web
@@ -13,7 +13,7 @@ class Category extends Model
     use SoftDeletes;
     
     protected $dates = ['deleted_at'];
-    protected $table = 'categories';
+    // Esta es la tabla (products) que le corresponde a este modelo.
+    protected $table = 'products';
     protected $hidden = ['created-at', 'updated_at'];
-
 }

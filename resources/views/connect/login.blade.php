@@ -22,7 +22,7 @@
                 {!! Form::email('email', null, ['class' => 'form-control']) !!}
             </div>
 
-            <label for="email" class="mtop16">Password:</label>
+            <label for="password" class="mtop16">Password:</label>
             <div class="input-group">
                 <div class="input-group-prepend">
                     <div class="input-group-text">

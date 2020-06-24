@@ -101,7 +101,7 @@
                                                 data-toggle="tooltip" data-placement="top" title="Editar">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                <a href="{{ url('/admin/category'.$cat->id.'/delete') }}"
+                                                <a href="{{ url('/admin/category/'.$cat->id.'/delete') }}"
                                                 data-toggle="tooltip" data-placement="top" title="Eliminar">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </a>

@@ -24,8 +24,8 @@ class ConnectController extends Controller
         return view('connect.login');
     }
 
-    # Una ves ingresados los datos en el formulario de login, llegan el email y la password a postLogin a travez de
-    #   la variable $request
+    # Una ves ingresados los datos en el formulario de login, llegan el email y la password a postLogin 
+    #   a travez de la variable $request
     public function postLogin(Request $request){
         $rules = [
             'email' => 'required|email',

@@ -52,10 +52,12 @@ class CategoriesController extends Controller
 
     }
 
+    // Metodo para editar las categorias.
     public function getCategoryEdit($id){
-        // 
+        // Busca la categoria segun su id en la base de datos
         $cat = Category::find($id);
         $data = ['cat' => $cat];
+        // Envia a la vista admin.categories.edit la categoria encontrada.
         return view('admin.categories.edit', $data);
     }
 
@@ -85,7 +87,13 @@ class CategoriesController extends Controller
                 return back()->with('message', 'Guardado con éxito.')->with('typealert', 'success');
             endif;
         endif;
+    }
 
+    public function getCategoryDelete($id){
+        $c = Category::find($id);
+        if($c->delete()):
+            return back()->with('message', 'Borrado con éxito.')->with('typealert', 'success');
+        endif;
     }
 }
 

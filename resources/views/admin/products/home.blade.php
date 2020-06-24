@@ -19,7 +19,7 @@
             <!-- Titulo de  -->
             <div class="header">
                 <h2 class="title">
-                    <i class="fas fa-boxes"></i>Productosss
+                    <i class="fas fa-boxes"></i>Productosss!
                 </h2>
             </div>
             <!-- Tabla  -->
