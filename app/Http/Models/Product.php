@@ -16,4 +16,8 @@ class Product extends Model
     // Esta es la tabla (products) que le corresponde a este modelo.
     protected $table = 'products';
     protected $hidden = ['created-at', 'updated_at'];
+
+    public function cat(){
+        return $this->hasOne(Category::class, 'id', 'category_id');
+    }
 }

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Models\Category;
 use App\Http\Models\Product;
-use Validator, Str, Config;
+use Validator, Str, Config, Image;
 
 
 class ProductController extends Controller
@@ -17,7 +17,10 @@ class ProductController extends Controller
     }
 
     public function getHome(){
-        return view('admin.products.home');
+        // Llamada a base de datos
+        $products = Product::orderBy('id', 'desc')->paginate(25);
+        $data = ['products' => $products];
+        return view('admin.products.home', $data);
     }
 
     public function getProductAdd(){
@@ -44,7 +47,7 @@ class ProductController extends Controller
             'price.required' => 'El precio del producto es requerido',
             'content.required' => 'Se necesita descripcion del producto'
         ];
-
+ 
         // Hace la validacion.
         $validator = Validator::make($request->all(), $rules, $message);
         // Comprueba si la validacion es aprobada o no.
@@ -60,9 +63,12 @@ class ProductController extends Controller
             // getClientOriginalExtension() extrae la extension del archivo
             $fileExt = trim($request->file('img')->getClientOriginalExtension());
             // Configuracion en config/filesystems.php
-            $upload_path = Config::get('filesystems.disk.uploads.root');
+            $upload_path = Config::get('filesystems.disks.uploads.root');
             $name = Str::slug(str_replace($fileExt, '', $request->file('img')->getClientOriginalName()));
             $filename = rand(1,999).'-'.$name.'.'.$fileExt;
+
+            // Ruta absoluta al archivo guardado
+            $final_file = $upload_path.'/'.$path.'/'.$filename;
             
 
             // Nota: los nombres status, name, slug, category_id, img, price y content los sacamos de
@@ -74,25 +80,38 @@ class ProductController extends Controller
             // El campo slug no es necesario pasarlo por la funcion e().
             $product->slug = Str::slug($request->input('slug'));
             $product->category_id = $request->input('category');
+
             $product->image = $filename;
             $product->price = $request->input('price');
             $product->in_discount = $request->input('indiscount');
             $product->discount = $request->input('discount');
             $product->content = e($request->input('content'));
-
+            $product->file_path = date('Y-m-d');
             // Llamamos al metodo save(),
             // Si se guarda sin error, redirecciona a /admin/products con el mensaje de éxito.
             // Si da algun error
             if($product->save()):
+                // Consulto si hay un archivo con el nombre 'img' en la peticion
                 if($request->hasFile('img')):
                     $fl = $request->img->storeAs($path, $filename, 'uploads');
+                    $img = Image::make($final_file);
+                    // fit() permite crear una miniatura con ciertos parametros
+                    $img->fit(64, 64, function($constraint){
+                        $constraint->upsize();
+                    });
+                    // '/t_' es solo un prefijo al nombre de la imagen
+                    $img->save($upload_path.'/'.$path.'/t_'.$filename);
                 endif;
                 return redirect ('/admin/products')->with('message', 'Guardado con éxito!!')->with('typealert', 'success');
             endif;
         endif;
+    }
 
-        
-
+    public function getProductEdit($id){
+        $p = Product::find($id);
+        $cats = Category::where('module', '0')->pluck('name', 'id');
+        $data = ['cats' => $cats, 'p' => $p];
+        return view('admin.products.edit', $data);
     }
 
 }

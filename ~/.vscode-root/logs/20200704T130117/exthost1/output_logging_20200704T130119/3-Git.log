@@ -1,0 +1,263 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/luk/Escritorio/ProyectosLaravel/cms
+> git status -z -u
+> git show :resources/views/admin/products/home.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/products/home.blade.php
+> git cat-file -s 640aeedcd7416203d49dc2545f8675e5a217dd31
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :config/app.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/config/app.php
+> git cat-file -s 8409e00ea9fc20548d3ce10d6af12607bad3e0af
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git show :app/User.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/User.php
+> git cat-file -s e79dab7fea8f6601eaf07072ee6b12fbe20bdbe1
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :config/app.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/config/app.php
+> git cat-file -s 8409e00ea9fc20548d3ce10d6af12607bad3e0af
+> git show :config/filesystems.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/config/filesystems.php
+> git cat-file -s 078dce6a9511d9cdc16ba3509d90a88fc85c222a
+> git show :resources/views/admin/products/home.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/products/home.blade.php
+> git cat-file -s 640aeedcd7416203d49dc2545f8675e5a217dd31
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :app/Providers/AppServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/AppServiceProvider.php
+> git cat-file -s ee8ca5bcd8f77d219f29529a9163587235c545d5
+> git show :app/Providers/AuthServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/AuthServiceProvider.php
+> git cat-file -s 30490683b9eb0b302ec899af306ff9b29102fd17
+> git show :app/Providers/BroadcastServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/BroadcastServiceProvider.php
+> git cat-file -s 395c518bc47b94752d00b8dc7aeb7d241633e7cf
+> git show :app/Providers/EventServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/EventServiceProvider.php
+> git cat-file -s 723a290d57d86b15a0da5924b60220a161b2967f
+> git show :app/Providers/RouteServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/RouteServiceProvider.php
+> git cat-file -s b34f5cdd1ca7213e2d2d4649820f04e7bdf49c36
+> git show :resources/views/admin/products/home.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/products/home.blade.php
+> git cat-file -s 640aeedcd7416203d49dc2545f8675e5a217dd31
+> git check-ignore -v -z --stdin
+> git show :config/app.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/config/app.php
+> git cat-file -s 8409e00ea9fc20548d3ce10d6af12607bad3e0af
+> git show :app/Providers/RouteServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/RouteServiceProvider.php
+> git cat-file -s b34f5cdd1ca7213e2d2d4649820f04e7bdf49c36
+> git show :app/User.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/User.php
+> git cat-file -s e79dab7fea8f6601eaf07072ee6b12fbe20bdbe1
+> git show :app/Providers/RouteServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/RouteServiceProvider.php
+> git cat-file -s b34f5cdd1ca7213e2d2d4649820f04e7bdf49c36
+> git show :config/app.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/config/app.php
+> git cat-file -s 8409e00ea9fc20548d3ce10d6af12607bad3e0af
+> git show :app/Providers/AppServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/AppServiceProvider.php
+> git cat-file -s ee8ca5bcd8f77d219f29529a9163587235c545d5
+> git show :app/Providers/AuthServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/AuthServiceProvider.php
+> git cat-file -s 30490683b9eb0b302ec899af306ff9b29102fd17
+> git show :app/Providers/BroadcastServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/BroadcastServiceProvider.php
+> git cat-file -s 395c518bc47b94752d00b8dc7aeb7d241633e7cf
+> git show :app/Providers/RouteServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/RouteServiceProvider.php
+> git cat-file -s b34f5cdd1ca7213e2d2d4649820f04e7bdf49c36
+> git show :app/Providers/EventServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/EventServiceProvider.php
+> git cat-file -s 723a290d57d86b15a0da5924b60220a161b2967f
+> git show :app/Providers/AppServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/AppServiceProvider.php
+> git cat-file -s ee8ca5bcd8f77d219f29529a9163587235c545d5
+> git show :resources/views/admin/products/home.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/products/home.blade.php
+> git cat-file -s 640aeedcd7416203d49dc2545f8675e5a217dd31
+> git show :app/Providers/RouteServiceProvider.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Providers/RouteServiceProvider.php
+> git cat-file -s b34f5cdd1ca7213e2d2d4649820f04e7bdf49c36
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/admin/products/home.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/products/home.blade.php
+> git cat-file -s 640aeedcd7416203d49dc2545f8675e5a217dd31
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template

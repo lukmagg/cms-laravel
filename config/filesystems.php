@@ -57,7 +57,7 @@ return [
 
         'uploads' => [
             'driver' => 'local',
-            'root' => '/home/luk/Escritorio/proyectos\ Laravel/cms/public/uploads'
+            'root' => '/home/luk/Escritorio/ProyectosLaravel/cms/public/uploads'
         ],
 
         's3' => [
