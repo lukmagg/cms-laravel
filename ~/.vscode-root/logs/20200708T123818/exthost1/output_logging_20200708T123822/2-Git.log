@@ -1,0 +1,77 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /home/luk/Escritorio/ProyectosLaravel/cms
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/admin/products/home.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/products/home.blade.php
+> git cat-file -s 6f0307d2c43de98f2b3bea0b1f7be883e979091c
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :resources/views/admin/master.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/master.blade.php
+> git cat-file -s 3a806e94ba64d289ed9f906cb6ea9c40961b6f77
+> git show :resources/views/admin/products/home.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/products/home.blade.php
+> git cat-file -s 6f0307d2c43de98f2b3bea0b1f7be883e979091c
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :app/Http/Models/Category.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Http/Models/Category.php
+> git cat-file -s 8ac3e8b6d5eb027c7d878c42065029204ec977c7
+> git show :app/Http/Models/PGallery.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Http/Models/PGallery.php
+> git show :app/Http/Models/Product.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Http/Models/Product.php
+> git cat-file -s 8d5b00b1022ca983aaf04eae9e7d314175a7124a
+> git check-ignore -v -z --stdin
+> git show :app/Http/Controllers/ConnectController.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/app/Http/Controllers/ConnectController.php
+> git cat-file -s f994f2364a7f2a13a81a97a49bbea2d9044b3611
+> git show :resources/views/admin/products/home.blade.php
+> git ls-files --stage -- /home/luk/Escritorio/ProyectosLaravel/cms/resources/views/admin/products/home.blade.php
+> git cat-file -s 6f0307d2c43de98f2b3bea0b1f7be883e979091c
+> git check-ignore -v -z --stdin

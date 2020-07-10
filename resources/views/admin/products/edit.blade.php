@@ -31,7 +31,7 @@
                         <!-- Abrimos el formulario  -->
                         <!-- 'url' => 'ruta' le dice a donde se va a enviar este formulario -->
                         <!-- 'files' => true es para perminiter enviar archivos por formulario -->      
-                        {!! Form::open(['url' => '/admin/product/add', 'files' => true]) !!}
+                        {!! Form::open(['url' => '/admin/product/'.$p->id.'/edit', 'files' => true]) !!}
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="name">Nombre del producto:</label>
@@ -126,13 +126,48 @@
                     <!-- Titulo de  -->
                     <div class="header">
                         <h2 class="title">
-                            <i class="far fa-images"></i>Imagen Destacada
+                            <i class="far fa-image"></i>Imagen Destacada
                         </h2>
                         <div class="inside">
                             <img src="{{ url('/uploads/'.$p->file_path.'/'.$p->image) }}" class="img-fluid">
                         </div>
                     </div>
                 </div>
+
+                <div class="panel shadow mtop16">
+                    <div class="header">
+                        <h2 class="title">
+                            <i class="far fa-images"></i>Galeria
+                        </h2>
+                    </div>
+                    <div class="inside product_gallery">
+                        {!! Form::open(['url' => '/admin/product/'.$p->id.'/gallery/add', 'files' => true, 'id' => 'form_product_gallery']) !!}
+                            
+                            {!! Form::file('file_image', ['id' => 'product_file_image', 'accept' => 'image/*',
+                            'style' => 'display:none', 'required'])  !!}
+                        
+                        {!! Form::close() !!}
+
+                        <div class="btn-submit">
+                            <a href="#" id="btn_product_file_image"><i class="fas fa-plus"></i></a>
+                        </div>
+                        
+                        <div class="tumbs">
+                                @foreach($p->getGallery as $img)
+                                    <div class="tumb">
+                                        <a href="{{ url('/admin/product/'.$p->id.'/gallery/'.$img->id.'/delete') }}" 
+                                            data-toggle="tooltip" data-placement="top" title="Eliminar">
+                                                <i class="fas fa-trash-alt"></i>
+                                        </a>              
+                                        <img src="{{ url('/uploads/'.$img->file_path.'/t_'.$img->file_name) }}">
+                                    </div>
+                                @endforeach
+                        </div>
+
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

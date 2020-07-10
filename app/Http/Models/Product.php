@@ -20,4 +20,11 @@ class Product extends Model
     public function cat(){
         return $this->hasOne(Category::class, 'id', 'category_id');
     }
+
+    //Creamos la relacion 1 a muchos
+    public function getGallery(){
+        return $this->hasMany(PGallery::class, 'product_id', 'id');
+    }
+
+    
 }

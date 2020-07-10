@@ -55,7 +55,7 @@
                                         {{$p->name}}
                                     </td>
                                         
-                                    <td width="150">
+                                        <td width="150">
                                         {{ $p->cat->name }}
                                     </td>
                                     

@@ -10,8 +10,12 @@
         // Module Products
         Route::get('/products', 'Admin\ProductController@getHome');
         Route::get('/product/add', 'Admin\ProductController@getProductAdd');
-        Route::get('product/{id}/edit', 'Admin\ProductController@getProductEdit');
+        Route::get('/product/{id}/edit', 'Admin\ProductController@getProductEdit');
+        Route::post('/product/{id}/edit', 'Admin\ProductController@postProductEdit');
         Route::post('/product/add', 'Admin\ProductController@postProductAdd');
+        Route::post('/product/{id}/gallery/add', 'Admin\ProductController@postProductGalleryAdd');
+        Route::get('/product/{id}/gallery/{gid}/delete', 'Admin\ProductController@getProductGalleryDelete');
+
 
 
         // Categories
