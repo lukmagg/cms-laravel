@@ -21,4 +21,11 @@ class UserController extends Controller
         $data = ['users' => $users];
         return view('admin.users.home', $data);
     }
+
+
+    public function getUserEdit($id){
+        $u = User::findOrFail($id);
+        $data = ['u' => $u];
+        return view('admin.users.user_edit', $data);
+    }
 }

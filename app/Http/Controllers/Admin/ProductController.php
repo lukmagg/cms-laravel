@@ -141,7 +141,9 @@ class ProductController extends Controller
 
             // Nota: los nombres status, name, slug, category_id, img, price y content los sacamos de
             //  los input del formulario.
-            $product = Product::find($id);
+            $product = Product::findOrFail($id);
+            $ipp = $product->file_path;
+            $ip = $product->image;
             $product->status = '0'; 
             // La funcion e() es para que no puedan enviar scripts maliciosos por el formulario.
             $product->name = e($request->input('name'));
@@ -185,6 +187,8 @@ class ProductController extends Controller
                     });
                     // '/t_' es solo un prefijo al nombre de la imagen
                     $img->save($upload_path.'/'.$path.'/t_'.$filename);
+                    unlink($upload_path.'/'.$ipp.'/'.$ip);
+                    unlink($upload_path.'/'.$ipp.'/t_'.$ip);
                 endif;
                 return back()->with('message', 'Actualizado con éxito!!')->with('typealert', 'success');
             endif;

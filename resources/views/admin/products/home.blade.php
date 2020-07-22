@@ -42,7 +42,7 @@
                         </tr>
                         <tbody>
                             @foreach($products as $p)
-                                <tr>
+                                <tr @if($p->status == "0") class="table-danger" @endif> 
                                     <td width="70">{{ $p->id }}</td>
                                     
                                     <td width="120">
@@ -67,6 +67,10 @@
                                     </td>
                                 </tr>
                             @endforeach
+                            <!-- Paginacion con clases de Bootstrap y Laravel-->
+                            <tr>
+                                <td colspan="6">{!! $products->render() !!}</td>
+                            </tr>
                         </tbody>
                     </theade>                    
                     

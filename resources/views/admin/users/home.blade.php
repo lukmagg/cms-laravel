@@ -48,9 +48,7 @@
                                         <a href="{{ url('/admin/user/'.$user->id.'/edit') }}" data-toggler="tooltip" data-toggle="tooltip" title="Editar">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <a href="{{ url('/admin/user/'.$user->id.'/delete') }}" data-toggler="tooltip" data-toggle="tooltip" title="Eliminar">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
+                                       
                                     </div>  
                                 </td>
                             </tr>
